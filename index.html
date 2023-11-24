@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Tenha a previsão do tempo na palma da sua mão">
+
+    <link rel="stylesheet" href="./src/css/reset.css">
+    <link rel="stylesheet" href="./src/css/styles.css">
+    <link rel="stylesheet" href="./src/css/responsive.css">
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <title>Previsão do Tempo</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <main class="container" data-aos="flip-down" data-aos-delay="620">
+        <div class="search" data-aos="zoom-in-up" data-aos-delay="400">
+            <input type="text" id="input-search" placeholder="Digite uma cidade">
+            <button class="button">
+                <img class="magnifying-glass" src="./src/images/imagens/lupa.png" alt="magnifying glass">
+            </button>
+        </div>
+        <div class="information">
+            <h1 id="city">Use a lupa acima para ver o clima em uma cidade</h1>
+            <p class="temperature" id="temperature"></p>
+
+            <img id="temporal-icon" src="https://cdn.weatherapi.com/weather/64x64/day/116.png"
+                alt="temporal condition icon">
+
+            <p class="condition" id="condition"></p>
+        </div>
+        <div class="secondary-information">
+            <div class="humidity">
+                <span>Umidade</span>
+                <span id="humidity">--</span>
+            </div>
+            <div class="wind-speed">
+                <span>Velocidade do Vento</span>
+                <span id="wind-speed">--</span>
+            </div>
+            <div class="uv-index">
+                <span>Índice UV</span>
+                <span id="uv">--</span>
+                <span id="uv-level">--</span>
+            </div>
+        </div>
+    </main>
+    <script src="./src/js/AOS.js"></script>
+    <script src="./src/js/index.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,103 @@
+:root {
+    --font: "Red Hat Display", sans-serif;
+    --primary-color: #eeeeee;
+    --secondary-color: #1f2949;
+    --tertiary-color: #ffffff;
+    --quartenary-color: #0a1435;
+}
+
+body {
+    background-color: var(--primary-color);
+    font-family: var(--font);
+    display: flex;
+    align-items: center;
+    height: 100vh;
+    justify-content: center;
+}
+
+.container {
+    background-color: var(--secondary-color);
+    color: var(--tertiary-color);
+    max-width: 330px;
+    text-align: center;
+    background-image: url(../images/imagens/background.png);
+    background-size: cover;
+    border-radius: 15px;
+    box-shadow: rgba(0, 0, 0, 0.6) 0 10px 50px;
+}
+
+.search {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    gap: 5px;
+}
+
+.search input {
+    background-color: var(--quartenary-color);
+    padding: 10px;
+    border-radius: 6px;
+    border: none;
+    outline: none;
+    color: var(--tertiary-color);
+    font-size: 16px;
+    font-weight: 700;
+    opacity: 0.7;
+}
+
+.search .button {
+    cursor: pointer;
+    background-color: var(--quartenary-color);
+    opacity: 0.7;
+    border: none;
+    outline: none;
+    border-radius: 6px;
+    padding: 5px 10px;
+}
+
+.search .button:hover {
+    transform: scale(1.07);
+}
+
+.search input:hover {
+    transform: scale(1.03);
+
+}
+
+.search .magnifying-glass {
+    width: 30px;
+    padding: 6px;
+    opacity: 0.8;
+}
+
+.information {
+    margin: 30px;
+}
+
+.information h1 {
+    font-size: 18px;
+}
+
+.information .temperature {
+    font-size: 60px;
+    margin: 20px 0;
+}
+
+.information .condition {
+    font-size: 20px;
+}
+
+.secondary-information {
+    color: var(--tertiary-color);
+    padding: 20px 30px;
+    border-radius: 0 0 15px 15px;
+}
+
+.secondary-information .humidity,
+.secondary-information .wind-speed,
+.secondary-information .uv-index {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+}
