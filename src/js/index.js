@@ -56,7 +56,7 @@ function showDataOnScreen(data, city) {
 }
 
 function changeImage(day) {
-    const image1 = "/src/images/imagens/sol2.jpg";
+    const image1 = "/src/images/imagens/sol.jpg";
     const image2 = "/src/images/imagens/auroraBoreal.jpg"
 
     if (day == 1) {
