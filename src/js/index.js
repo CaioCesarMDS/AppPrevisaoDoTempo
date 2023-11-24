@@ -11,16 +11,21 @@ buttonSearch.addEventListener("click", async () => {
 
     const data = await searchCityData(city);
 
+    console.log(data);
+
     if (data) showDataOnScreen(data, city);
 });
 
 async function searchCityData(city) {
+    //Coloca a chave da API e a cidade para pedir as informações.
     const apiUrl = `https://api.weatherapi.com/v1/current.json?key=${keyApi}&q=${city}&aqi=yes&lang=pt`;
 
+    // Busca os dados atráves da API
     const response = await fetch(apiUrl);
 
     if (response.status !== 200) return;
 
+    // Transforma os dados em json
     const data = await response.json();
 
     return data;
@@ -34,9 +39,11 @@ function showDataOnScreen(data, city) {
     const uv = data.current.uv;
     const temporalIcon = data.current.condition.icon;
     const day = data.current.is_day;
-
+    const country = data.location.country;
 
     changeImage(day);
+
+    document.getElementById("country").textContent = country;
 
     document.getElementById("city").textContent = city;
 
@@ -57,7 +64,7 @@ function showDataOnScreen(data, city) {
 
 function changeImage(day) {
     const image1 = "/src/images/imagens/sol.jpg";
-    const image2 = "/src/images/imagens/auroraBoreal.jpg"
+    const image2 = "/src/images/imagens/auroraBoreal.jpg";
 
     if (day == 1) {
         let container = document.querySelector(".container");
